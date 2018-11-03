@@ -1,0 +1,11 @@
+@import 'src/resume-theme';
+
+.mat-card-title
+{
+    font-size: 30pt;
+}
+
+.mainCard
+{
+    background-color: mat-color($primary, 50);
+}

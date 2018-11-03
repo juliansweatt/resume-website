@@ -1,0 +1,357 @@
+{
+    "name": "Julian Sweatt",
+    "education": [
+        {
+            "institution": "Florida State University",
+            "startDate": {
+                "month": 8,
+                "day": 0,
+                "year": 2015
+            },
+            "endDate": {
+                "month": 12,
+                "day": 0,
+                "year": 2019
+            },
+            "degree": "Computer Science B.S. & Computational Biology B.S.",
+            "gpa": 3.30,
+            "location":{
+                "city": "Tallahassee",
+                "zipCode": null,
+                "state": "FL",
+                "country": null
+            },
+            "courses": [
+                "Programming I (C++)",
+                "Internet Programming with Java",
+                "Unix",
+                "Data Structures, Algorithms, & Generic Programming",
+                "Computer Organization I",
+                "Object Oriented Programming",
+                "Calculus I & II",
+                "Discrete Math I & II"
+            ],
+            "graduated": null,
+            "important": true
+        },
+        {
+            "institution": "Pensacola High School",
+            "startDate": {
+                "month": 8,
+                "day": 0,
+                "year": 2012
+            },
+            "endDate": {
+                "month": 6,
+                "day": 0,
+                "year": 2015
+            },
+            "degree": "International Baccalaureate Diploma & Florida Scholar's Diploma",
+            "gpa": 4.2,
+            "location":{
+                "city": "Pensacola",
+                "zipCode": null,
+                "state": "FL",
+                "country": null
+            },
+            "courses": null,
+            "graduated": "With Highest Honors",
+            "important": false
+        }
+    ],
+    "employment":[
+        {
+            "employer": "Rockwell Automation",
+            "startDate": {
+                "month": 5,
+                "day": 0,
+                "year": 2018
+            },
+            "endDate": {
+                "month": 12,
+                "day": 0,
+                "year": 2018
+            },
+            "jobTitle": "Software Engineer",
+            "location": {
+                "city": "Cleveland",
+                "zipCode": null,
+                "state": "OH",
+                "country": null
+            },
+            "details": [
+                "Lead & developed a user interface project for a proprietary multi-client IDE in Angular through the design, development, testing, continuous integration, and delivery phases",
+                "Investigated & identified causes of performance variability within a developing platform",
+                "Configured Allen Bradley programmable logic controllers (PLCs) using RSLogix",
+                "Designated as the team’s expert of modern web development languages"
+            ],
+            "important": true
+        },
+        {
+            "employer": "Apple",
+            "startDate": {
+                "month": 7,
+                "day": 0,
+                "year": 2016
+            },
+            "endDate": {
+                "month": 11,
+                "day": 0,
+                "year": 2017
+            },
+            "jobTitle": "AppleCare Advisor",
+            "location": {
+                "city": "Tallahassee",
+                "zipCode": null,
+                "state": "FL",
+                "country": null
+            },
+            "details": [
+                "Devised service strategies and guided customers through troubleshooting iOS devices",
+                "Communicated effectively and efficiently in an entirely telecommuted environment",
+                "Safeguarded confidential customer and company data while maintaining brand integrity",
+                "Selected as a leader to participate in specialized leadership training and mentor others",
+                "Pioneered a weekly technical newsletter which was distributed throughout the organization",
+                "Consistently recognized as a top performer (Finalist for the AppleCare Excellence Award 2017 & recognized as the Most Valuable Advisor in annual and monthly evaluations"
+            ],
+            "important": true
+        },
+        {
+            "employer": "Paradise Beach Homes",
+            "startDate": {
+                "month": 5,
+                "day": 0,
+                "year": 2015
+            },
+            "endDate": {
+                "month": 7,
+                "day": 0,
+                "year": 2016
+            },
+            "jobTitle": "Technical Support",
+            "location": {
+                "city": "Pensacola Beach",
+                "zipCode": null,
+                "state": "FL",
+                "country": null
+            },
+            "details": [
+                "Interacted directly with customers to ensure a superb customer service experience",
+                "Provided technical support and guidance to customers for home entertainment devices",
+                "Managed and executed maintenance, construction, and electronic configuration projects"
+            ],
+            "important": true
+        },
+        {
+            "employer": "Native Café",
+            "startDate": {
+                "month": 5,
+                "day": 0,
+                "year": 2015
+            },
+            "endDate": {
+                "month": 7,
+                "day": 0,
+                "year": 2015
+            },
+            "jobTitle": "Kitchen Staff",
+            "location": {
+                "city": "Pensacola Beach",
+                "zipCode": null,
+                "state": "FL",
+                "country": null
+            },
+            "details": [
+                "Prepared ingredients and washed dishes with safety and cleanliness in mind",
+                "Maintained proper health code requirements throughout the kitchen"
+            ],
+            "important": false
+        },
+        {
+            "employer": "Sacred Heart Children's Hospital",
+            "startDate": {
+                "month": 7,
+                "day": 0,
+                "year": 2014
+            },
+            "endDate": {
+                "month": 3,
+                "day": 0,
+                "year": 2015
+            },
+            "jobTitle": "Project Management Volunteer",
+            "location": {
+                "city": "Pensacola",
+                "zipCode": null,
+                "state": "FL",
+                "country": null
+            },
+            "details": [
+                "Organized artistic events and projects for patients at the hospital",
+                "Produced outreach materials to increase awareness of hospital needs",
+                "Took charge as a care-taker for young patients while parents and nurses were away"
+            ],
+            "important": false
+        }
+    ],
+    "skills": [
+        {
+            "name": "C++",
+            "skillLevel": 3,
+            "category": "Languages"
+        },
+        {
+            "name": "Java",
+            "skillLevel": 3,
+            "category": "Languages"
+        },
+        {
+            "name": "Angular",
+            "skillLevel": 3,
+            "category": "Languages"
+        },
+        {
+            "name": "Type Script",
+            "skillLevel": 3,
+            "category": "Languages"
+        },
+        {
+            "name": "HTML",
+            "skillLevel": 2,
+            "category": "Languages"
+        },
+        {
+            "name": "Swift",
+            "skillLevel": 1,
+            "category": "Languages"
+        },
+        {
+            "name": "CSS",
+            "skillLevel": 2,
+            "category": "Languages"
+        },
+        {
+            "name": "MIPS Assembly",
+            "skillLevel": 2,
+            "category": "Languages"
+        },
+        {
+            "name": "Python",
+            "skillLevel": 1,
+            "category": "Languages"
+        },
+        {
+            "name": "Agile Scrum",
+            "skillLevel": 1,
+            "category": "Misc"
+        },
+        {
+            "name": "Kanban",
+            "skillLevel": 2,
+            "category": "Misc"
+        },
+        {
+            "name": "Git",
+            "skillLevel": 2,
+            "category": "Misc"
+        },
+        {
+            "name": "Git Lab",
+            "skillLevel": 1,
+            "category": "Misc"
+        },
+        {
+            "name": "Rational Team Concert",
+            "skillLevel": 1,
+            "category": "Misc"
+        },
+        {
+            "name": "Jenkins CI",
+            "skillLevel": 1,
+            "category": "Misc"
+        },
+        {
+            "name": "REST API",
+            "skillLevel": 2,
+            "category": "Misc"
+        },
+        {
+            "name": "JSON",
+            "skillLevel": 2,
+            "category": "Misc"
+        },
+        {
+            "name": "MacOS",
+            "skillLevel": 3,
+            "category": "Operating Systems"
+        },
+        {
+            "name": "Windows",
+            "skillLevel": 2,
+            "category": "Operating Systems"
+        },
+        {
+            "name": "iOS",
+            "skillLevel": 3,
+            "category": "Operating Systems"
+        },
+        {
+            "name": "Linux",
+            "skillLevel": 1,
+            "category": "Operating Systems"
+        },
+        {
+            "name": "Unix",
+            "skillLevel": 3,
+            "category": "Operating Systems"
+        },
+        {
+            "name": "XCode",
+            "skillLevel": 2,
+            "category": "IDEs"
+        },
+        {
+            "name": "AutoCad",
+            "skillLevel": 2,
+            "category": "IDEs"
+        },
+        {
+            "name": "Visual Studio",
+            "skillLevel": 2,
+            "category": "IDEs"
+        },
+        {
+            "name": "Logix",
+            "skillLevel": 2,
+            "category": "IDEs"
+        },
+        {
+            "name": "Florida Notary Public",
+            "skillLevel": 2,
+            "category": "Licenses"
+        },
+        {
+            "name": "Adobe Certified Web Designer",
+            "skillLevel": 2,
+            "category": "Licenses"
+        }
+    ],
+    "skillShuffle": true,
+    "connections": [
+        {
+            "connectionMedium": "linkedin",
+            "link": "http://linkedin.juliansweatt.com",
+            "enabled": true
+        },
+        {
+            "connectionMedium": "github",
+            "link": "http://github.juliansweatt.com",
+            "enabled": true
+        },
+        {
+            "connectionMedium": "email",
+            "link": "mailto:hello@juliansweatt.com",
+            "enabled": true
+        }
+    ]
+}

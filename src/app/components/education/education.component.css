@@ -1,0 +1,38 @@
+.mat-card-title
+{
+    font-size: 15pt;
+}
+
+.institution
+{
+    font-weight: bold;
+    
+}
+
+.dateRange
+{
+    font-size: 10pt;
+    font-style: italic;
+}
+
+.location
+{
+    font-size: 10pt;
+    font-style: italic;
+}
+
+.degree
+{
+    font-size: 12pt;
+}
+
+.mat-icon-button.show
+{
+    display: flex;
+    justify-content: center;
+}
+
+.mat-icon-button
+{
+    margin: 10px auto;
+}

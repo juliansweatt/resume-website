@@ -1,0 +1,101 @@
+@import 'src/resume-theme';
+
+.red,
+.mat-flat-button.red{
+    background-color: mat-color($red);
+    color: white;
+}
+.mat-flat-button.redInactive{
+    background-color: mat-color($red, 100);
+    color: black;
+}
+
+.orange,
+.mat-flat-button.orange{
+    background-color: mat-color($orange);
+    color: white;
+}
+.mat-flat-button.orangeInactive{
+    background-color: mat-color($orange, 100);
+    color: black;
+}
+
+.yellow,
+.mat-flat-button.yellow{
+    background-color: mat-color($yellow);
+    color: white;
+}
+.mat-flat-button.yellowInactive{
+    background-color: mat-color($yellow, 100);
+    color: black;
+}
+
+.green,
+.mat-flat-button.green{
+    background-color: mat-color($green);
+    color: white;
+}
+.mat-flat-button.greenInactive{
+    background-color: mat-color($green, 100);
+    color: black;
+}
+
+.blue,
+.mat-flat-button.blue{
+    background-color: mat-color($blue);
+    color: white;
+}
+.mat-flat-button.blueInactive{
+    background-color: mat-color($blue, 100);
+    color: black;
+}
+
+.purple,
+.mat-flat-button.purple{
+    background-color: mat-color($purple);
+    color: white;
+}
+.mat-flat-button.purpleInactive{
+    background-color: mat-color($purple, 100);
+    color: black;
+}
+
+div.toggleBar{
+    display: inline-block;
+    margin: auto;
+    min-width: 100%;
+    text-align: center;
+}
+
+.toggleButtonContainer{
+    vertical-align: middle;
+    display: inline-block;
+    padding: 5px;
+}
+
+.toggleButton{
+    min-width: auto;
+}
+
+.gridTile{
+    font-weight: bold;
+    text-align: center;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.gridTile:hover{
+    background-color: black;
+    transform:scale(.9);
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.gridContent{
+    padding-left: 5px;
+    padding-right: 5px;
+}

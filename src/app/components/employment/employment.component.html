@@ -1,0 +1,25 @@
+<div *ngFor="let job of employmentHistory">
+    <mat-card *ngIf="job.important || displayAll">
+      <mat-card-title>
+          <span class="company">{{job.employer}}</span>&nbsp;
+          <span class="jobTitle">{{job.jobTitle}}</span> <br/>
+          <span class="dateRange">{{job.startDate}} - {{job.endDate}}</span> | <span class="location">{{job.location}}</span>
+      </mat-card-title>
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item class="details" *ngFor="let detail of job.details">
+              <mat-icon>chevron_right</mat-icon>{{detail}}
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+</div>
+<mat-card-footer>
+    <div *ngIf="displayAll; then displayingAll; else notDisplayingAll"></div>
+    <ng-template #notDisplayingAll>
+        <button color=accent class="show" mat-icon-button (click)="toggleShow();"><mat-icon>expand_more</mat-icon></button>
+    </ng-template>
+    <ng-template #displayingAll>
+        <button color=accent class="show" mat-icon-button mat-icon-button (click)="toggleShow();"><mat-icon>expand_less</mat-icon></button>
+    </ng-template>
+</mat-card-footer>

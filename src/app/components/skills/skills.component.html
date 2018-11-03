@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-header>
+    <div class="toggleBar">
+      <span class="toggleButtonContainer" *ngFor="let category of categoryArray">
+        <button mat-flat-button class="toggleButton" (click)="categories.get(category[0]).toggle()" [ngClass]=category[1].style>{{category[0]}}</button>
+      </span>
+    </div>
+  </mat-card-header>
+
+  <br/>
+
+  <mat-card-content>
+    <mat-grid-list cols="15">
+      <div *ngFor="let skill of skillsHistory">
+        <mat-grid-tile class="gridTile" [ngStyle]="{'font-size': skill.getFontSize()}" [ngClass]="categories.get(skill.category).style" *ngIf="categories.get(skill.category).active" colspan={{skill.skillLevel}} rowspan={{skill.skillLevel}}>
+          <div class="gridContent">
+              {{skill.name}}
+          </div>
+        </mat-grid-tile>
+      </div>
+    </mat-grid-list>
+  </mat-card-content>
+</mat-card>
