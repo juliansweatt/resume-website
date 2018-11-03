@@ -2,7 +2,7 @@
  This is the source code for resume.juliansweatt.com
 
 # Plan
-Currently, this sit is used as a personal resume website. I plan to add to this personal website by creating a stylized home page centered around easily linking my other media accounts together.
+Currently, this site is used as a personal resume website. I plan to add to this personal website by creating a stylized home page centered around easily linking my other media accounts together.
 
 This site will be used as the basis for a future public resumé builder project.
 
