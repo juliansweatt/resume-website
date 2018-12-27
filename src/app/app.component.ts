@@ -115,7 +115,6 @@ export class AppComponent {
   constructor(public json: JsonImportService){
     json.jsonReady.subscribe(ready=>{
       this.ready = ready.valueOf();
-      console.log(this.ready);
     })
   }
 }

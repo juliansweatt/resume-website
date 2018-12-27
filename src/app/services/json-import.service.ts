@@ -89,7 +89,6 @@ export class JsonImportService {
 				if(this.jsonData)
 				{
 					this.ready.next(true);
-					console.log("CHANGED TO" + this.ready.value)
 				}
 		})
 	}
@@ -111,7 +110,7 @@ export class JsonImportService {
 
 	public shouldShuffleSkills(): boolean
 	{
-		return this.jsonData.shuffleSkills
+		return this.jsonData.shuffleSkills;
 	}
 
 	public getConnections(): Array<JsonConnection>
