@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import * as data from '../../assets/resume-source/resume.json';
-import { date } from 'src/app/app.component';
+import { HttpClient } from '@angular/common/http';
+import { Observable, BehaviorSubject } from 'rxjs';
+import { delay } from 'q';
 
 interface JsonResume {
 	name: string;
@@ -75,15 +76,22 @@ interface JsonConnection {
 	providedIn: 'root'
 })
 export class JsonImportService {
-	private jsonData: JsonResume = null;
+	private jsonData: JsonResume = <JsonResume> null;
 
-	constructor() { 
-		this.jsonData = data.default;
-		console.log("Resume built from JSON data:", this.jsonData);
+	private ready = new BehaviorSubject(false);
+	public jsonReady = this.ready.asObservable();
+
+	constructor(private http: HttpClient) { 
+		this.http.get('http://www.juliansweatt.com/assets/resume-source/resume.json')
+			.subscribe((data:any) => {
+				this.jsonData = data;
+				console.log("Resume built from JSON data:", this.jsonData);
+				this.ready.next(true);
+		})
 	}
 
 	public getEducation():Array<JsonEducation>
-	{
+	{	
 		return this.jsonData.education;
 	};
 

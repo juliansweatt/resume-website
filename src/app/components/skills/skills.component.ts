@@ -86,32 +86,36 @@ export class SkillsComponent implements OnInit {
   } 
 
   constructor( private json: JsonImportService ) {
-    let exampleSkills = new Array<any>();
+    json.jsonReady.subscribe(ready=>{
+      if(ready.valueOf()){
+        let exampleSkills = new Array<any>();
 
-    for( let skillInstance of json.getSkills() )
-    {
-      exampleSkills.push(new skill(skillInstance.name, skillInstance.skillLevel, skillInstance.category))
-    }
-
-    let currentColorIndex: number = -1;
+        for( let skillInstance of json.getSkills() )
+        {
+          exampleSkills.push(new skill(skillInstance.name, skillInstance.skillLevel, skillInstance.category))
+        }
     
-    if( json.shouldShuffleSkills() )
-    {
-      exampleSkills.sort(function(a, b){return 0.5 - Math.random()})
-    }
-
-    for(let skill of exampleSkills)
-    {
-      this.skillsHistory.push(skill);
-      
-      if(!this.categories.has(skill.category))
-      {
-        currentColorIndex++;
-        this.categories.set(skill.category, new skillCategory( true, this.colors[currentColorIndex]));
+        let currentColorIndex: number = -1;
+        
+        if( json.shouldShuffleSkills() )
+        {
+          exampleSkills.sort(function(a, b){return 0.5 - Math.random()})
+        }
+    
+        for(let skill of exampleSkills)
+        {
+          this.skillsHistory.push(skill);
+          
+          if(!this.categories.has(skill.category))
+          {
+            currentColorIndex++;
+            this.categories.set(skill.category, new skillCategory( true, this.colors[currentColorIndex]));
+          }
+        }
+    
+        this.categoryArray = Array.from(this.categories.entries());
       }
-    }
-
-    this.categoryArray = Array.from(this.categories.entries());
+    })
   }
 
   ngOnInit() {

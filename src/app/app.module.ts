@@ -15,9 +15,9 @@ import {
   MatToolbarModule,
   MatTooltipModule,
  } from "@angular/material";
-import { RouterModule } from "@angular/router";
 import { SkillsComponent } from './components/skills/skills.component';
 import { ConnectComponent } from './components/connect/connect.component'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,9 +28,6 @@ import { ConnectComponent } from './components/connect/connect.component'
     ConnectComponent
   ],
   imports: [
-    RouterModule.forRoot([
-      {path: "resume", component: AppComponent}
-    ]),
     BrowserModule,
     BrowserAnimationsModule,
     MatIconModule,
@@ -41,6 +38,7 @@ import { ConnectComponent } from './components/connect/connect.component'
     MatButtonToggleModule,
     MatToolbarModule,
     MatTooltipModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

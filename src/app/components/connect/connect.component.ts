@@ -24,15 +24,18 @@ export class ConnectComponent implements OnInit {
   public connections:Array<connection> = new Array<connection>();
 
   constructor( private json: JsonImportService ) {
-    // Import from JSON File
-    for(let connectionInstance of json.getConnections())
-    {
-      // Push to Display
-      this.connections.push(new connection(connectionInstance.connectionMedium, connectionInstance.link, connectionInstance.enabled));
-    }
+    json.jsonReady.subscribe(ready=>{
+      if(ready.valueOf()){
+        // Import from JSON File
+        for(let connectionInstance of json.getConnections())
+        {
+          // Push to Display
+          this.connections.push(new connection(connectionInstance.connectionMedium, connectionInstance.link, connectionInstance.enabled));
+        }
+      }
+    })
   }
 
   ngOnInit() {
   }
-
 }
