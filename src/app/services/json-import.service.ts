@@ -86,7 +86,11 @@ export class JsonImportService {
 			.subscribe((data:any) => {
 				this.jsonData = data;
 				console.log("Resume built from JSON data:", this.jsonData);
-				this.ready.next(true);
+				if(this.jsonData)
+				{
+					this.ready.next(true);
+					console.log("CHANGED TO" + this.ready.value)
+				}
 		})
 	}
 

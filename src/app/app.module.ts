@@ -14,6 +14,7 @@ import {
   MatButtonToggleModule,
   MatToolbarModule,
   MatTooltipModule,
+  MatProgressSpinnerModule,
  } from "@angular/material";
 import { SkillsComponent } from './components/skills/skills.component';
 import { ConnectComponent } from './components/connect/connect.component'
@@ -38,6 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonToggleModule,
     MatToolbarModule,
     MatTooltipModule,
+    MatProgressSpinnerModule,
     HttpClientModule
   ],
   providers: [],

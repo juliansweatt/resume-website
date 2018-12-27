@@ -110,6 +110,12 @@ export class location
 })
 export class AppComponent {
   title = 'Resumé';
+  ready:boolean = false;
 
-  constructor(private json: JsonImportService){}
+  constructor(public json: JsonImportService){
+    json.jsonReady.subscribe(ready=>{
+      this.ready = ready.valueOf();
+      console.log(this.ready);
+    })
+  }
 }
