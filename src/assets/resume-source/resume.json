@@ -14,7 +14,7 @@
                 "year": 2019
             },
             "degree": "Computer Science B.S. & Computational Biology B.S.",
-            "gpa": 3.30,
+            "gpa": 3.03,
             "location":{
                 "city": "Tallahassee",
                 "zipCode": null,
@@ -26,10 +26,13 @@
                 "Internet Programming with Java",
                 "Unix",
                 "Data Structures, Algorithms, & Generic Programming",
-                "Computer Organization I",
+                "Computer Organization I & II",
                 "Object Oriented Programming",
                 "Calculus I & II",
-                "Discrete Math I & II"
+                "Discrete Math I & II",
+                "Operating Systems",
+                "Programming Languages",
+                "Advanced Python"
             ],
             "graduated": null,
             "important": true
@@ -202,6 +205,16 @@
             "category": "Languages"
         },
         {
+            "name": "C",
+            "skillLevel": 2,
+            "category": "Languages"
+        },
+        {
+            "name": "C#",
+            "skillLevel": 1,
+            "category": "Languages"
+        },
+        {
             "name": "Java",
             "skillLevel": 3,
             "category": "Languages"
@@ -212,8 +225,13 @@
             "category": "Languages"
         },
         {
-            "name": "Type Script",
+            "name": "TypeScript",
             "skillLevel": 3,
+            "category": "Languages"
+        },
+        {
+            "name": "JavaScript",
+            "skillLevel": 2,
             "category": "Languages"
         },
         {
@@ -222,8 +240,8 @@
             "category": "Languages"
         },
         {
-            "name": "Swift",
-            "skillLevel": 1,
+            "name": "Python",
+            "skillLevel": 2,
             "category": "Languages"
         },
         {
@@ -238,7 +256,12 @@
         },
         {
             "name": "Python",
-            "skillLevel": 1,
+            "skillLevel": 3,
+            "category": "Languages"
+        },
+        {
+            "name": "Shell",
+            "skillLevel": 3,
             "category": "Languages"
         },
         {
