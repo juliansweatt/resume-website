@@ -220,27 +220,22 @@
             "category": "Languages"
         },
         {
+            "name": "Java Script",
+            "skillLevel": 2,
+            "category": "Languages"
+        },
+        {
             "name": "Angular",
             "skillLevel": 3,
             "category": "Languages"
         },
         {
-            "name": "TypeScript",
+            "name": "Type Script",
             "skillLevel": 3,
             "category": "Languages"
         },
         {
-            "name": "JavaScript",
-            "skillLevel": 2,
-            "category": "Languages"
-        },
-        {
             "name": "HTML",
-            "skillLevel": 2,
-            "category": "Languages"
-        },
-        {
-            "name": "Python",
             "skillLevel": 2,
             "category": "Languages"
         },
