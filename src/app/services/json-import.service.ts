@@ -25,6 +25,7 @@ interface JsonEducation {
 		year: number;
 	};
 	degree: string;
+	minor: string;
 	gpa: number;
 	location: {
 		city: string;

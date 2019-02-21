@@ -14,6 +14,7 @@
                 "year": 2019
             },
             "degree": "Computer Science B.S. & Computational Biology B.S.",
+            "minor": "Mathematics",
             "gpa": 3.03,
             "location":{
                 "city": "Tallahassee",
