@@ -388,6 +388,16 @@
             "connectionMedium": "email",
             "link": "mailto:hello@juliansweatt.com",
             "enabled": true
+        },
+        {
+            "connectionMedium": "youtube",
+            "link": "http://youtube.juliansweatt.com",
+            "enabled": false
+        },
+        {
+            "connectionMedium": "share",
+            "link": "http://share.juliansweatt.com",
+            "enabled": true
         }
     ]
 }

@@ -36,6 +36,19 @@ export class ConnectComponent implements OnInit {
     })
   }
 
+  getImportantLength():number
+  {
+    var tally:number = 0;
+    for(let connectionInstance of this.connections)
+    {
+      if(connectionInstance.enabled)
+      {
+        tally++;
+      }
+    }
+    return tally;
+  }
+
   ngOnInit() {
   }
 }
