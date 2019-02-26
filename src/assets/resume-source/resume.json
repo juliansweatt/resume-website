@@ -395,7 +395,7 @@
             "enabled": false
         },
         {
-            "connectionMedium": "share",
+            "connectionMedium": "other",
             "link": "http://share.juliansweatt.com",
             "enabled": true
         }
