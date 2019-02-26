@@ -19,6 +19,7 @@ import {
 import { SkillsComponent } from './components/skills/skills.component';
 import { ConnectComponent } from './components/connect/connect.component'
 import { HttpClientModule } from '@angular/common/http';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     EducationComponent,
     EmploymentComponent,
     SkillsComponent,
-    ConnectComponent
+    ConnectComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,

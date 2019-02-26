@@ -1,0 +1,26 @@
+<div *ngFor="let project of projectList">
+  <mat-card *ngIf="project.important || displayAll">
+    <mat-card-title>
+        <a *ngIf="project.link.length > 0" target="_blank" rel="noopener noreferrer" href="{{project.link}}"><button class="portfolio_link" color=accent mat-icon-button><mat-icon>link</mat-icon></button></a>
+        <span class="name">{{project.name}}</span>&nbsp;
+        <span class="organization">{{project.role}}</span> <br/>
+        <span class="dateRange">{{project.organization}}</span> | <span class="location">{{project.location}}</span>
+    </mat-card-title>
+    <mat-card-content *ngIf="project.details.length > 0">
+      <mat-list>
+        <mat-list-item class="details" *ngFor="let detail of project.details">
+            <mat-icon>chevron_right</mat-icon>{{detail}}
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>
+<!--mat-card-footer>
+  <div *ngIf="displayAll; then displayingAll; else notDisplayingAll"></div>
+  <ng-template #notDisplayingAll>
+      <button color=accent class="show" mat-icon-button (click)="toggleShow();"><mat-icon>expand_more</mat-icon></button>
+  </ng-template>
+  <ng-template #displayingAll>
+      <button color=accent class="show" mat-icon-button mat-icon-button (click)="toggleShow();"><mat-icon>expand_less</mat-icon></button>
+  </ng-template>
+</mat-card-footer-->

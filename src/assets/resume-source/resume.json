@@ -199,6 +199,22 @@
             "important": false
         }
     ],
+    "projects":[
+        {
+            "name": "Open Access Data Visualization",
+            "role": "Contracted Software Engineer",
+            "organization": "Cleveland Museum of Art & Pandata LLC",
+            "location": {
+                "city": "Cleveland",
+                "zipCode": null,
+                "state": "OH",
+                "country": null
+            },
+            "details": [],
+            "link": "http://www.clevelandart.org/art/collection/plot",
+            "important": true
+        }
+    ],
     "skills": [
         {
             "name": "C++",

@@ -8,6 +8,7 @@ interface JsonResume {
 	education: Array<JsonEducation>;
 	employment: Array<JsonEmployment>;
 	skills: Array<JsonSkill>;
+	projects: Array<JsonProject>;
 	shuffleSkills: boolean;
 	connections: Array<JsonConnection>;
 }
@@ -61,6 +62,21 @@ interface JsonEmployment {
 	important: boolean;
 }
 
+interface JsonProject {
+	name: string;
+	role: string;
+	organization: string;
+	location: {
+		city: string;
+		zipCode: number;
+		state: string;
+		country: string;
+	};
+	details: Array<string>;
+	link: string;
+	important: boolean;
+}
+
 interface JsonSkill {
 	name: string;
 	skillLevel: number;
@@ -107,6 +123,11 @@ export class JsonImportService {
 	public getSkills(): Array<JsonSkill>
 	{
 		return this.jsonData.skills;
+	};
+
+	public getProjects(): Array<JsonProject>
+	{
+		return this.jsonData.projects;
 	};
 
 	public shouldShuffleSkills(): boolean

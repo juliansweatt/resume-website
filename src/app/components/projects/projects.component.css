@@ -1,0 +1,51 @@
+.mat-card-title
+{
+    font-size: 15pt;
+}
+
+.dateRange
+{
+    font-size: 10pt;
+    font-style: italic;
+}
+
+.location
+{
+    font-size: 10pt;
+    font-style: italic;
+}
+
+.organization
+{   
+    font-size: 12pt;
+}
+
+.name
+{
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+.details
+{
+    word-wrap: break-word;
+    display: block;
+    height: auto !important;
+    margin-bottom: 5px;
+}
+
+.mat-icon-button.show
+{
+    display: flex;
+    justify-content: center;
+}
+
+.mat-icon-button
+{
+    margin: 10px auto;
+}
+
+.portfolio_link
+{
+    float: right;
+}
