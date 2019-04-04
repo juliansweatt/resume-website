@@ -17,9 +17,9 @@
 <mat-card-footer>
     <div *ngIf="displayAll; then displayingAll; else notDisplayingAll"></div>
     <ng-template #notDisplayingAll>
-        <button color=accent class="show" mat-icon-button (click)="toggleShow();"><mat-icon>expand_more</mat-icon></button>
+        <button color=accent class="show" mat-icon-button (click)="toggleShow();"><mat-icon matTooltip="View More">expand_more</mat-icon></button>
     </ng-template>
     <ng-template #displayingAll>
-        <button color=accent class="show" mat-icon-button mat-icon-button (click)="toggleShow();"><mat-icon>expand_less</mat-icon></button>
+        <button color=accent class="show" mat-icon-button mat-icon-button (click)="toggleShow();"><mat-icon matTooltip="View Less">expand_less</mat-icon></button>
     </ng-template>
 </mat-card-footer>

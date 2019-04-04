@@ -7,38 +7,37 @@
         <span class="dateRange">{{education.startDate}} - {{education.endDate}}</span>
     </mat-card-title>
     <mat-card-content>
-      <span class="minor" *ngIf="education.minor"><u>Minor</u>: {{education.minor}}<br/></span>
-      <div *ngIf="education.graduated; then graduated; else notGraduated"></div>
+        <span class="minor" *ngIf="education.minor"><u>Minor</u>: {{education.minor}}<br/></span>
+        <div *ngIf="education.graduated; then graduated; else notGraduated"></div>
 
-      <ng-template #graduated>
-				<span><u>Cumulative GPA</u>: {{education.gpa}} of 4.0 </span><br/>
-				<span>Graduated {{education.endDate}} {{education.graduated}}</span>
-      </ng-template>
+        <ng-template #graduated>
+                    <span><u>Cumulative GPA</u>: {{education.gpa}} of 4.0 </span><br/>
+                    <span>Graduated {{education.endDate}} {{education.graduated}}</span>
+        </ng-template>
 
-			
-			<ng-container *ngIf="education.courses">
-				<br />
-				<u>Relevant Coursework</u>:
-				<ng-container class="coursework" *ngFor="let course of education.courses">
-						{{course}} <strong *ngIf="course != education.courses[education.courses.length-1]">&nbsp;•&nbsp;</strong>
-				</ng-container>
-			</ng-container>
+        <ng-container *ngIf="education.courses">
+            <br />
+            <u>Relevant Coursework</u>:
+            <ng-container class="coursework" *ngFor="let course of education.courses">
+                {{course}} <strong *ngIf="course != education.courses[education.courses.length-1]">&nbsp;•&nbsp;</strong>
+            </ng-container>
+        </ng-container>
 
 
-      <ng-template #notGraduated>
-				<span><u>Current GPA</u>: {{education.gpa}} of 4.0</span> <br/>
-				<span>Expected to Graduate {{education.endDate}}</span>
-			</ng-template>
-			
+        <ng-template #notGraduated>
+            <span><u>Current GPA</u>: {{education.gpa}} of 4.0</span> <br/>
+            <span>Expected to Graduate {{education.endDate}}</span>
+        </ng-template>
+
     </mat-card-content>
   </mat-card>
 </div>
 <mat-card-footer>
     <div *ngIf="displayAll; then displayingAll; else notDisplayingAll"></div>
     <ng-template #notDisplayingAll>
-        <button color=accent class="show"mat-icon-button (click)="toggleShow();"><mat-icon>expand_more</mat-icon></button>
+        <button color=accent class="show"mat-icon-button (click)="toggleShow();"><mat-icon matTooltip="View More">expand_more</mat-icon></button>
     </ng-template>
     <ng-template #displayingAll>
-        <button color=accent class="show"mat-icon-button mat-icon-button (click)="toggleShow();"><mat-icon>expand_less</mat-icon></button>
+        <button color=accent class="show"mat-icon-button mat-icon-button (click)="toggleShow();"><mat-icon matTooltip="View Less">expand_less</mat-icon></button>
     </ng-template>
 </mat-card-footer>
