@@ -117,7 +117,7 @@
                 "Safeguarded confidential customer and company data while maintaining brand integrity",
                 "Selected as a leader to participate in specialized leadership training and mentor others",
                 "Pioneered a weekly technical newsletter which was distributed throughout the organization",
-                "Consistently recognized as a top performer (Finalist for the AppleCare Excellence Award 2017 & recognized as the Most Valuable Advisor in annual and monthly evaluations"
+                "Consistently recognized as a top performer (Finalist for the AppleCare Excellence Award 2017 & recognized as the Most Valuable Advisor in annual and monthly evaluations)"
             ],
             "important": true
         },
@@ -211,7 +211,8 @@
                 "country": null
             },
             "details": [
-                "Developed a web-based data visualization solution in D3 for CMA's Open Access collection with Pandata LLC"
+                "Developed a tool to visualize over 10,000 works of art using D3 and Javascript",
+                "Deployed an interactive system to debut Cleveland Museum of Art’s Open Access Project, extending free access of the 6th largest art collection in the United States to the public"
             ],
             "link": "http://www.clevelandart.org/art/collection/plot",
             "important": true
@@ -227,9 +228,9 @@
                 "country": null
             },
             "details": [
-                "Developed a web-based app called `Easy Park` using the Mean Stack and the Smartcar API",
+                "Developed a web-based app called `Easy Park` using the M.E.A.N. Stack and the Smartcar API",
                 "Easy Park allows users to request their car be moved, granting others access to safely move their car via the app, without a key",
-                "Runner up `Best Use of Smartcar Technology` at YHack 2018 (Yale University Hackathon)"
+                "Runner up `Best Use of Smartcar Technology` at YHack 2018"
             ],
             "link": "https://github.com/juliansweatt/easy_park",
             "important": true
