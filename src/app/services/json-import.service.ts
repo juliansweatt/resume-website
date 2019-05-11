@@ -99,7 +99,7 @@ export class JsonImportService {
 	public jsonReady = this.ready.asObservable();
 
 	constructor(private http: HttpClient) { 
-		this.http.get('http://www.juliansweatt.com/assets/resume-source/resume.json')
+		this.http.get('./assets/resume-source/resume.json')
 			.subscribe((data:any) => {
 				this.jsonData = data;
 				console.log("Resume built from JSON data:", this.jsonData);
