@@ -1,5 +1,7 @@
-@import 'src/resume-theme';
+@import '~@angular/material/theming';
 
-svg{
-    fill: mat-color($primary, 900);
+@mixin svg-fills($theme) {
+    svg{
+        fill: mat-color(map-get($theme, primary), 900);
+    }
 }

@@ -1,11 +1,13 @@
-@import 'src/resume-theme';
+@import '~@angular/material/theming';
 
 .mat-card-title
 {
     font-size: 30pt;
 }
 
-.mainCard
-{
-    background-color: mat-color($primary, 50);
+@mixin main-card-theme($theme) {
+    .mainCard
+    {
+        background-color: mat-color(map-get($theme, primary), 50);
+    }
 }

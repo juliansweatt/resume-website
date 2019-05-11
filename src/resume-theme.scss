@@ -1,19 +1,32 @@
 @import '~@angular/material/theming';
+@import './component-themes.scss';
 @include mat-core();
 
 // Skills Grid Colors
-$red: mat-palette($mat-red, 300);
+$red:    mat-palette($mat-red, 300);
 $orange: mat-palette($mat-orange, 300);
 $yellow: mat-palette($mat-yellow, 500);
-$green: mat-palette($mat-green, 300);
-$blue: mat-palette($mat-blue, 300);
+$green:  mat-palette($mat-green, 300);
+$blue:   mat-palette($mat-blue, 300);
 $purple: mat-palette($mat-purple, 300);
 
 // Theme Colors
 $primary: mat-palette($mat-teal, 500);
 $accent:  mat-palette($mat-blue-grey, 900);
 $warn:    mat-palette($mat-red);
+$default-theme: mat-light-theme($primary, $accent, $warn);
+@include angular-material-theme($default-theme);
+@include component-themes($default-theme);
 
-$resume-theme: mat-light-theme($primary, $accent, $warn);
+// NOTE: Naming the classes differently allows the SVG to change as needed, but the background coloring gets messed up
 
-@include angular-material-theme($resume-theme);
+// Alternate Theme
+$primary: mat-palette($mat-red, 500);
+$accent:  mat-palette($mat-red, 900);
+$warn:    mat-palette($mat-red);
+$light-red:   mat-light-theme($primary, $accent, $warn);
+
+.light-red{
+    @include angular-material-theme($light-red);
+    @include component-themes($light-red);
+}

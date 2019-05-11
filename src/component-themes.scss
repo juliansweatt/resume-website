@@ -1,0 +1,7 @@
+@import './app/components/connect/connect.component';
+@import './app/app.component';
+
+@mixin component-themes($theme) {
+    @include svg-fills($theme);
+    @include main-card-theme($theme);
+}
