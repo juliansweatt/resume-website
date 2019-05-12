@@ -1,5 +1,9 @@
 @import 'src/resume-theme';
 
+.all{
+    background:rgba($color: black, $alpha: 0.1);
+}
+
 .red,
 .mat-flat-button.red{
     background-color: mat-color($red);
@@ -88,6 +92,7 @@ div.toggleBar{
 
 .gridTile:hover{
     background-color: black;
+    color: white;
     transform:scale(.9);
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;

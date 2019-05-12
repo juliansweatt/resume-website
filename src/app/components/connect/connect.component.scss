@@ -2,6 +2,6 @@
 
 @mixin svg-fills($theme) {
     svg{
-        fill: mat-color(map-get($theme, primary), 900);
+        fill: mat-color(map-get($theme, primary), 500);
     }
 }

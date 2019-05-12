@@ -10,7 +10,7 @@ $green:  mat-palette($mat-green, 300);
 $blue:   mat-palette($mat-blue, 300);
 $purple: mat-palette($mat-purple, 300);
 
-// Theme Colors
+// Default Theme (Light)
 $primary: mat-palette($mat-teal, 500);
 $accent:  mat-palette($mat-blue-grey, 900);
 $warn:    mat-palette($mat-red);
@@ -18,15 +18,34 @@ $default-theme: mat-light-theme($primary, $accent, $warn);
 @include angular-material-theme($default-theme);
 @include component-themes($default-theme);
 
-// NOTE: Naming the classes differently allows the SVG to change as needed, but the background coloring gets messed up
+// Default Theme (Dark)
+$primary: mat-palette($mat-teal, 500);
+$accent:  mat-palette($mat-blue-grey, 50);
+$warn:    mat-palette($mat-red);
+$dark-default-theme: mat-dark-theme($primary, $accent, $warn);
+.dark-default-theme{
+    @include angular-material-theme($dark-default-theme);
+    @include component-themes($dark-default-theme);
+}
 
-// Alternate Theme
+// Alternate Theme (Light)
 $primary: mat-palette($mat-red, 500);
 $accent:  mat-palette($mat-red, 900);
 $warn:    mat-palette($mat-red);
-$light-red:   mat-light-theme($primary, $accent, $warn);
+$red-theme:   mat-light-theme($primary, $accent, $warn);
 
-.light-red{
-    @include angular-material-theme($light-red);
-    @include component-themes($light-red);
+.red-theme{
+    @include angular-material-theme($red-theme);
+    @include component-themes($red-theme);
+}
+
+// Alternate Theme (Dark)
+$primary: mat-palette($mat-red, 500);
+$accent:  mat-palette($mat-red, 50);
+$warn:    mat-palette($mat-red);
+$dark-red-theme:   mat-dark-theme($primary, $accent, $warn);
+
+.dark-red-theme{
+    @include angular-material-theme($dark-red-theme);
+    @include component-themes($dark-red-theme);
 }

@@ -8,6 +8,11 @@
 @mixin main-card-theme($theme) {
     .mainCard
     {
-        background-color: mat-color(map-get($theme, primary), 50);
+        background-color: mat-color(map-get($theme, accent), 50);
+    }
+
+    .dark
+    {
+        background-color: mat-color(map-get($theme, accent), 900);
     }
 }
