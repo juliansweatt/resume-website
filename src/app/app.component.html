@@ -1,55 +1,58 @@
-<span *ngIf="ready; else loading">
-  <mat-toolbar color="primary" style="position: sticky; position: -webkit-sticky; top: 0; z-index: 1000;">
-    <mat-toolbar-row>
-      <img matTooltip="Julian Sweatt" src="assets/j_light.png" alignheight="50px" width="50px" style="display: block; margin-left: auto; margin-right: auto;">
-    </mat-toolbar-row>
-  </mat-toolbar>
-
-  <mat-card class="mainCard">
-      <mat-card-title>
-        Education
-      </mat-card-title>
-      <mat-card-content>
-        <app-education>Loading Education</app-education>
-      </mat-card-content>
-    </mat-card>
-    
-    <mat-card class="mainCard">
-      <mat-card-title>
-        Employment
-      </mat-card-title>
-      <mat-card-content>
-        <app-employment>Loading Employment</app-employment>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card class="mainCard">
-      <mat-card-title>
-        Projects
-      </mat-card-title>
-      <mat-card-content>
-        <app-projects>Loading Projects</app-projects>
-      </mat-card-content>
-    </mat-card>
-    
-    <mat-card class="mainCard">
-      <mat-card-title>
-        Skills
-      </mat-card-title>
-      <mat-card-content>
-        <app-skills>Loading Skills</app-skills>
-      </mat-card-content>
-    </mat-card>
-    
-    <mat-card class="mainCard">
-      <mat-card-content>
-        <app-connect>Loading Connect</app-connect>
-      </mat-card-content>
-    </mat-card>
+<span [class]="currentTheme">
+  <span *ngIf="ready; else loading">
+    <mat-toolbar color="primary" style="position: sticky; position: -webkit-sticky; top: 0; z-index: 1000;">
+      <mat-toolbar-row>
+        <img matTooltip="Julian Sweatt" src="assets/j_light.png" alignheight="50px" width="50px" style="display: block; margin-left: auto; margin-right: auto;">
+        <button color=accent (click)="this.themeService.toggleDark();" mat-icon-button><mat-icon matTooltip="Toggle Dark Mode">brightness_3</mat-icon></button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  
+    <mat-card class="mainCard" [ngClass]="{'dark':isDark}">
+        <mat-card-title>
+          Education
+        </mat-card-title>
+        <mat-card-content>
+          <app-education>Loading Education</app-education>
+        </mat-card-content>
+      </mat-card>
+      
+      <mat-card class="mainCard" [ngClass]="{'dark':isDark}">
+        <mat-card-title>
+          Employment
+        </mat-card-title>
+        <mat-card-content>
+          <app-employment>Loading Employment</app-employment>
+        </mat-card-content>
+      </mat-card>
+  
+      <mat-card class="mainCard" [ngClass]="{'dark':isDark}">
+        <mat-card-title>
+          Projects
+        </mat-card-title>
+        <mat-card-content>
+          <app-projects>Loading Projects</app-projects>
+        </mat-card-content>
+      </mat-card>
+      
+      <mat-card class="mainCard" [ngClass]="{'dark':isDark}">
+        <mat-card-title>
+          Skills
+        </mat-card-title>
+        <mat-card-content>
+          <app-skills>Loading Skills</app-skills>
+        </mat-card-content>
+      </mat-card>
+      
+      <mat-card class="mainCard" [ngClass]="{'dark':isDark}">
+        <mat-card-content>
+          <app-connect>Loading Connect</app-connect>
+        </mat-card-content>
+      </mat-card>
+  </span>
+  <ng-template #loading>
+    <div style="position: fixed; top:50%; left:50%; transform: translate(-50%, -50%);">
+      <h1 style="text-align:center">Loading Résumé</h1>
+      <mat-spinner style="margin:0 auto;" mode="indeterminate" color="primary"></mat-spinner>
+    </div>
+  </ng-template>
 </span>
-<ng-template #loading>
-  <div style="position: fixed; top:50%; left:50%; transform: translate(-50%, -50%);">
-    <h1 style="text-align:center">Loading Résumé</h1>
-    <mat-spinner style="margin:0 auto;" mode="indeterminate" color="primary"></mat-spinner>
-  </div>
-</ng-template>

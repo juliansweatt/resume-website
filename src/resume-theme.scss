@@ -1,19 +1,51 @@
 @import '~@angular/material/theming';
+@import './component-themes.scss';
 @include mat-core();
 
 // Skills Grid Colors
-$red: mat-palette($mat-red, 300);
+$red:    mat-palette($mat-red, 300);
 $orange: mat-palette($mat-orange, 300);
 $yellow: mat-palette($mat-yellow, 500);
-$green: mat-palette($mat-green, 300);
-$blue: mat-palette($mat-blue, 300);
+$green:  mat-palette($mat-green, 300);
+$blue:   mat-palette($mat-blue, 300);
 $purple: mat-palette($mat-purple, 300);
 
-// Theme Colors
+// Default Theme (Light)
 $primary: mat-palette($mat-teal, 500);
 $accent:  mat-palette($mat-blue-grey, 900);
 $warn:    mat-palette($mat-red);
+$default-theme: mat-light-theme($primary, $accent, $warn);
+@include angular-material-theme($default-theme);
+@include component-themes($default-theme);
 
-$resume-theme: mat-light-theme($primary, $accent, $warn);
+// Default Theme (Dark)
+$primary: mat-palette($mat-teal, 500);
+$accent:  mat-palette($mat-blue-grey, 50);
+$warn:    mat-palette($mat-red);
+$dark-default-theme: mat-dark-theme($primary, $accent, $warn);
+.dark-default-theme{
+    @include angular-material-theme($dark-default-theme);
+    @include component-themes($dark-default-theme);
+}
 
-@include angular-material-theme($resume-theme);
+// Alternate Theme (Light)
+$primary: mat-palette($mat-red, 500);
+$accent:  mat-palette($mat-red, 900);
+$warn:    mat-palette($mat-red);
+$red-theme:   mat-light-theme($primary, $accent, $warn);
+
+.red-theme{
+    @include angular-material-theme($red-theme);
+    @include component-themes($red-theme);
+}
+
+// Alternate Theme (Dark)
+$primary: mat-palette($mat-red, 500);
+$accent:  mat-palette($mat-red, 50);
+$warn:    mat-palette($mat-red);
+$dark-red-theme:   mat-dark-theme($primary, $accent, $warn);
+
+.dark-red-theme{
+    @include angular-material-theme($dark-red-theme);
+    @include component-themes($dark-red-theme);
+}

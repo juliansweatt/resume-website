@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { JsonImportService } from 'src/app/services/json-import.service';
+import { ThemeControlService } from './services/theme-control.service';
 
 export class date
 {
@@ -106,15 +107,25 @@ export class location
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [ JsonImportService ] // Provide global service (singleton)
+  providers: [ JsonImportService, ThemeControlService ] // Provide global service (singleton)
 })
 export class AppComponent {
-  title = 'Resumé';
+  title:string = 'Resumé';
   ready:boolean = false;
+  currentTheme:string = null;
+  isDark:boolean = null;
 
-  constructor(public json: JsonImportService){
+  constructor(public json: JsonImportService, public themeService: ThemeControlService){
     json.jsonReady.subscribe(ready=>{
       this.ready = ready.valueOf();
     })
+
+    this.themeService.isDark.subscribe(isDark =>{
+      this.isDark = isDark.valueOf();
+    });
+
+    this.themeService.currentTheme.subscribe(currentTheme =>{
+      this.currentTheme = currentTheme.valueOf();
+    });
   }
 }
