@@ -1,13 +1,8 @@
 <span [class]="currentTheme">
   <span *ngIf="ready; else loading">
-    <mat-toolbar color="primary" style="position: sticky; position: -webkit-sticky; top: 0; z-index: 1000;">
-      <mat-toolbar-row>
-        <img matTooltip="Julian Sweatt" src="assets/j_light.png" alignheight="50px" width="50px" style="display: block; margin-left: auto; margin-right: auto;">
-        <button color=accent (click)="this.themeService.toggleDark();" mat-icon-button><mat-icon matTooltip="Toggle Dark Mode">brightness_3</mat-icon></button>
-      </mat-toolbar-row>
-    </mat-toolbar>
+      <header-bar></header-bar>
   
-    <mat-card class="mainCard" [ngClass]="{'dark':isDark}">
+      <mat-card class="mainCard" [ngClass]="{'dark':isDark}">
         <mat-card-title>
           Education
         </mat-card-title>

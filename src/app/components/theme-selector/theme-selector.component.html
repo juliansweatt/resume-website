@@ -1,0 +1,17 @@
+<button mat-icon-button color=accent [mat-menu-trigger-for]="themeSelection" matTooltip="Select a theme!">
+  <mat-icon>color_lens</mat-icon>
+</button>
+<button color=accent (click)="this.themeService.toggleDark();" mat-icon-button><mat-icon matTooltip="Toggle Dark Mode">brightness_3</mat-icon></button>
+
+<mat-menu #themeSelection="matMenu">
+  <mat-grid-list cols="2">
+      <mat-grid-tile *ngFor="let theme of themeService.themes">
+        <div mat-menu-item (click)="themeService.changeTheme(theme.name)">
+          <div class="dot-frame">
+            <mat-icon class="chosen-dot" *ngIf="themeService.isTheme(theme.name)">check_circle</mat-icon>
+            <div class="theme-dot" [style.border-color]="theme.primary" [style.background]="theme.primary"></div>
+          </div>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+</mat-menu>

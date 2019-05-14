@@ -10,27 +10,27 @@ $green:  mat-palette($mat-green, 300);
 $blue:   mat-palette($mat-blue, 300);
 $purple: mat-palette($mat-purple, 300);
 
-// Default Theme (Light)
+// Teal Theme (Light)
 $primary: mat-palette($mat-teal, 500);
 $accent:  mat-palette($mat-blue-grey, 900);
 $warn:    mat-palette($mat-red);
-$default-theme: mat-light-theme($primary, $accent, $warn);
-@include angular-material-theme($default-theme);
-@include component-themes($default-theme);
+$teal-theme: mat-light-theme($primary, $accent, $warn);
+@include angular-material-theme($teal-theme);
+@include component-themes($teal-theme);
 
-// Default Theme (Dark)
+// Teal Theme (Dark)
 $primary: mat-palette($mat-teal, 500);
 $accent:  mat-palette($mat-blue-grey, 50);
 $warn:    mat-palette($mat-red);
-$dark-default-theme: mat-dark-theme($primary, $accent, $warn);
-.dark-default-theme{
-    @include angular-material-theme($dark-default-theme);
-    @include component-themes($dark-default-theme);
+$dark-teal-theme: mat-dark-theme($primary, $accent, $warn);
+.dark-teal-theme{
+    @include angular-material-theme($dark-teal-theme);
+    @include component-themes($dark-teal-theme);
 }
 
-// Alternate Theme (Light)
+// Red Theme (Light)
 $primary: mat-palette($mat-red, 500);
-$accent:  mat-palette($mat-red, 900);
+$accent:  mat-palette($mat-red, A100);
 $warn:    mat-palette($mat-red);
 $red-theme:   mat-light-theme($primary, $accent, $warn);
 
@@ -39,13 +39,57 @@ $red-theme:   mat-light-theme($primary, $accent, $warn);
     @include component-themes($red-theme);
 }
 
-// Alternate Theme (Dark)
+// Red Theme (Dark)
 $primary: mat-palette($mat-red, 500);
-$accent:  mat-palette($mat-red, 50);
+$accent:  mat-palette($mat-gray, 50);
 $warn:    mat-palette($mat-red);
 $dark-red-theme:   mat-dark-theme($primary, $accent, $warn);
 
 .dark-red-theme{
     @include angular-material-theme($dark-red-theme);
     @include component-themes($dark-red-theme);
+}
+
+// Purple Theme (Light)
+$primary: mat-palette($mat-purple, 500);
+$accent:  mat-palette($mat-pink, A400);
+$warn:    mat-palette($mat-red);
+$purple-theme:   mat-light-theme($primary, $accent, $warn);
+
+.purple-theme{
+    @include angular-material-theme($purple-theme);
+    @include component-themes($purple-theme);
+}
+
+// Purple Theme (Dark)
+$primary: mat-palette($mat-purple, 500);
+$accent:  mat-palette($mat-gray, 50);
+$warn:    mat-palette($mat-red);
+$dark-purple-theme:   mat-dark-theme($primary, $accent, $warn);
+
+.dark-purple-theme{
+    @include angular-material-theme($dark-purple-theme);
+    @include component-themes($dark-purple-theme);
+}
+
+// Brown Theme (Light)
+$primary: mat-palette($mat-brown, 500);
+$accent:  mat-palette($mat-green, 500);
+$warn:    mat-palette($mat-red);
+$brown-theme:   mat-light-theme($primary, $accent, $warn);
+
+.brown-theme{
+    @include angular-material-theme($brown-theme);
+    @include component-themes($brown-theme);
+}
+
+// Brown Theme (Dark)
+$primary: mat-palette($mat-brown, 500);
+$accent:  mat-palette($mat-brown, 50);
+$warn:    mat-palette($mat-red);
+$dark-brown-theme:   mat-dark-theme($primary, $accent, $warn);
+
+.dark-brown-theme{
+    @include angular-material-theme($dark-brown-theme);
+    @include component-themes($dark-brown-theme);
 }
