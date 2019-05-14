@@ -39,12 +39,20 @@ export class ThemeControlService {
 
   changeTheme(replacement:string)
   {
+    let previous = this.theme.value;
+
     if(this.darkMode.value)
     {
       replacement = "dark-" + replacement;
     }
 
     this.theme.next(replacement);
+
+    // Replace theme for container elements (menus and pop-outs)
+    this.overlayContainer.getContainerElement().classList.remove(previous);
+    this.overlayContainer.getContainerElement().classList.add(this.theme.value);
+
+    this.saveTheme();
   }
 
   toggleDark()
@@ -63,6 +71,8 @@ export class ThemeControlService {
     // Replace theme for container elements (menus and pop-outs)
     this.overlayContainer.getContainerElement().classList.remove(previous);
     this.overlayContainer.getContainerElement().classList.add(this.theme.value);
+
+    this.saveTheme();
   }
 
   isTheme(query:string):boolean
@@ -77,5 +87,36 @@ export class ThemeControlService {
     }
   }
 
-  constructor(public overlayContainer: OverlayContainer) {}
+  saveTheme()
+  {
+    window.localStorage.setItem("theme", this.theme.value);
+  }
+
+  getTheme():string
+  {
+    return window.localStorage.getItem("theme");
+  }
+
+  loadTheme()
+  {
+    var savedTheme:string = this.getTheme()
+    if(savedTheme)
+    {
+      if(savedTheme.includes('dark-'))
+      {
+        savedTheme = savedTheme.slice(5);
+        this.darkMode.next(true);
+      }
+      else
+      {
+        this.darkMode.next(false);
+      }
+      this.changeTheme(savedTheme);
+      console.log("recovered", savedTheme, "dark:",this.darkMode.value);
+    }
+  }
+
+  constructor(public overlayContainer: OverlayContainer) {
+    this.loadTheme();
+  }
 }
