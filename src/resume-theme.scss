@@ -10,25 +10,25 @@ $green:  mat-palette($mat-green, 300);
 $blue:   mat-palette($mat-blue, 300);
 $purple: mat-palette($mat-purple, 300);
 
-// Default Theme (Light)
+// Teal Theme (Light)
 $primary: mat-palette($mat-teal, 500);
 $accent:  mat-palette($mat-blue-grey, 900);
 $warn:    mat-palette($mat-red);
-$default-theme: mat-light-theme($primary, $accent, $warn);
-@include angular-material-theme($default-theme);
-@include component-themes($default-theme);
+$teal-theme: mat-light-theme($primary, $accent, $warn);
+@include angular-material-theme($teal-theme);
+@include component-themes($teal-theme);
 
-// Default Theme (Dark)
+// Teal Theme (Dark)
 $primary: mat-palette($mat-teal, 500);
 $accent:  mat-palette($mat-blue-grey, 50);
 $warn:    mat-palette($mat-red);
-$dark-default-theme: mat-dark-theme($primary, $accent, $warn);
-.dark-default-theme{
-    @include angular-material-theme($dark-default-theme);
-    @include component-themes($dark-default-theme);
+$dark-teal-theme: mat-dark-theme($primary, $accent, $warn);
+.dark-teal-theme{
+    @include angular-material-theme($dark-teal-theme);
+    @include component-themes($dark-teal-theme);
 }
 
-// Alternate Theme (Light)
+// Red Theme (Light)
 $primary: mat-palette($mat-red, 500);
 $accent:  mat-palette($mat-red, 900);
 $warn:    mat-palette($mat-red);
@@ -39,7 +39,7 @@ $red-theme:   mat-light-theme($primary, $accent, $warn);
     @include component-themes($red-theme);
 }
 
-// Alternate Theme (Dark)
+// Red Theme (Dark)
 $primary: mat-palette($mat-red, 500);
 $accent:  mat-palette($mat-red, 50);
 $warn:    mat-palette($mat-red);

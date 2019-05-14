@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { JsonImportService } from 'src/app/services/json-import.service';
 import { ThemeControlService } from './services/theme-control.service';
+import { OverlayContainer } from '@angular/cdk/overlay';
 
 export class date
 {
@@ -115,7 +116,7 @@ export class AppComponent {
   currentTheme:string = null;
   isDark:boolean = null;
 
-  constructor(public json: JsonImportService, public themeService: ThemeControlService){
+  constructor(public overlayContainer: OverlayContainer, public json: JsonImportService,public themeService: ThemeControlService){
     json.jsonReady.subscribe(ready=>{
       this.ready = ready.valueOf();
     })
@@ -127,5 +128,7 @@ export class AppComponent {
     this.themeService.currentTheme.subscribe(currentTheme =>{
       this.currentTheme = currentTheme.valueOf();
     });
+
+    overlayContainer.getContainerElement().classList.add(this.currentTheme);
   }
 }

@@ -15,11 +15,14 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatProgressSpinnerModule,
+  MatMenuModule,
  } from "@angular/material";
 import { SkillsComponent } from './components/skills/skills.component';
 import { ConnectComponent } from './components/connect/connect.component'
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { ThemeSelectorComponent } from './components/theme-selector/theme-selector.component';
+import { HeaderBarComponent } from './components/header-bar/header-bar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,9 @@ import { ProjectsComponent } from './components/projects/projects.component';
     EmploymentComponent,
     SkillsComponent,
     ConnectComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ThemeSelectorComponent,
+    HeaderBarComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,8 @@ import { ProjectsComponent } from './components/projects/projects.component';
     MatToolbarModule,
     MatTooltipModule,
     MatProgressSpinnerModule,
-    HttpClientModule
+    HttpClientModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
