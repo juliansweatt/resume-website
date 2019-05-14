@@ -26,6 +26,14 @@ export class ThemeControlService {
     {
       name: "teal-theme",
       primary: "#009688"
+    },
+    {
+      name: "purple-theme",
+      primary: "#9C27B0"
+    },
+    {
+      name: "brown-theme",
+      primary: "#795548"
     }
   ];
 
